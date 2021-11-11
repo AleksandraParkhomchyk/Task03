@@ -6,7 +6,8 @@ public class MathematicalExpressionEvaluator {
 
     static public double calculate(String input) {
         String output = infixToRpn(input);
-        return counting(output);
+        double result = counting(output);
+        return result;
     }
 
     private static boolean letterOrDigit(char c) {
@@ -18,8 +19,6 @@ public class MathematicalExpressionEvaluator {
             return 1;
         else if (ch == '*' || ch == '/')
             return 2;
-        else if (ch == '^')
-            return 3;
         else
             return -1;
     }
@@ -81,6 +80,9 @@ public class MathematicalExpressionEvaluator {
         return result;
     }
 }
+
+
+
 
 
 
